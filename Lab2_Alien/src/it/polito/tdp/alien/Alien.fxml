@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="343.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.alien.AlienController">
+<BorderPane prefHeight="370.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.alien.AlienController">
    <top>
       <Label text="Lab 1 - Alien Translator" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -39,13 +39,13 @@
                   <VBox prefHeight="100.0" prefWidth="179.0">
                      <children>
                         <Pane prefHeight="35.0" prefWidth="179.0" />
-                        <TextField fx:id="txtWord" prefWidth="171.0" promptText="Insert the text..." />
+                        <TextField fx:id="txtWord" onAction="#doTranslate" prefWidth="171.0" promptText="Insert the text..." />
                      </children>
                   </VBox>
                   <VBox layoutX="148.0" layoutY="10.0" prefHeight="103.0" prefWidth="116.0">
                      <children>
                         <Pane prefHeight="35.0" prefWidth="179.0" />
-                        <Button fx:id="btnTranslate" mnemonicParsing="false" onAction="#doTranslate" text="Translate">
+                        <Button fx:id="btnTranslate" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doTranslate" prefHeight="26.0" prefWidth="104.0" text="Translate">
                            <VBox.margin>
                               <Insets left="5.0" />
                            </VBox.margin>
@@ -59,7 +59,44 @@
                   </ImageView>
                </children>
             </HBox>
-            <TextField fx:id="txtResult" alignment="TOP_LEFT" editable="false" prefHeight="196.0" prefWidth="493.0" text="Welcome to Alien Dictionary v2016.">
+            <HBox layoutX="10.0" layoutY="113.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="16.0" prefWidth="523.0" text="Inizializzatore">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="64.0" text="Word" />
+                  <TextField fx:id="txtAlien" prefHeight="26.0" prefWidth="135.0" promptText="Alien language">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="64.0" text="Translate">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtNative" layoutX="74.0" layoutY="10.0" onAction="#doAdd" prefHeight="26.0" prefWidth="135.0" promptText="Native language">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#doAdd" text="Add">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TextField fx:id="txtResult" alignment="TOP_LEFT" editable="false" prefHeight="234.0" prefWidth="493.0" promptText="Welcome to Alien Dictionary v2016.">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
@@ -68,10 +105,10 @@
       </VBox>
    </center>
    <bottom>
-      <HBox prefHeight="46.0" prefWidth="493.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="34.0" prefWidth="493.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane prefHeight="46.0" prefWidth="407.0" />
-            <Button fx:id="btnReset" alignment="CENTER" mnemonicParsing="false" onAction="#doReset" prefHeight="55.0" prefWidth="85.0" text="Clear Text">
+            <Pane prefHeight="25.0" prefWidth="394.0" />
+            <Button fx:id="btnReset" alignment="CENTER" mnemonicParsing="false" onAction="#doReset" prefHeight="41.0" prefWidth="112.0" text="Clear Text">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
