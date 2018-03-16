@@ -74,7 +74,7 @@ public class AlienController {
     		toAddAlien=txtAlien.getText().toLowerCase();
     		toAddNative=txtNative.getText().toLowerCase();
     		ad.addWord(toAddAlien, toAddNative);
-    		txtResult.appendText("\nLa traduzione è stata inserita. "+inseritaAl+" corrisponde a "+inseritaNat);
+    		txtResult.appendText("\nLa traduzione è stata inserita. "+inseritaAl.toUpperCase()+" corrisponde a "+inseritaNat.toUpperCase());
     		txtAlien.clear();
     		txtNative.clear();
     	}
