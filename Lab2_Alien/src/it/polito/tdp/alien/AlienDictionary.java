@@ -13,13 +13,14 @@ public class AlienDictionary {
 			we.setTranslation(translation);
 			dictionary.add(we);
 		}
+		else {
 		for(WordEnhanced w : this.dictionary) {
 			if(w.getAlienWord().toLowerCase().equals(alienWord.toLowerCase())){
 				w.setTranslation(translation);
 			}
 			else
 				dictionary.add(new WordEnhanced(alienWord, translation));
-		}
+		}}
 	}
 	public String translateWord(String alienWord) {
 		String translation=null;

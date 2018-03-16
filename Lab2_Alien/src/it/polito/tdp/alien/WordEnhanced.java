@@ -27,9 +27,10 @@ public class WordEnhanced {
 
 
 	public String getTranslation() {
-		String translationTmp="";
-		for(String s: listTranslation) {
-				translationTmp+= s+" ";
+		String translationTmp=listTranslation.get(0);
+		for(int i=1; i<listTranslation.size(); i++)
+		{
+			translationTmp+= " oppure "+listTranslation.get(i);
 		}
 		return translationTmp;
 	}
