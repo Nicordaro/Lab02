@@ -55,7 +55,10 @@ public class AlienController {
 	    	txtResult.clear();
 	    	toTranslate = txtWord.getText();
 	    	translation = ad.translateWord(toTranslate);
-	    	txtResult.appendText("La parola da tradurre è: "+toTranslate+". La sua traduzione è: "+translation+".\n");
+	    	if(toTranslate.contains("?")) {
+	    		txtResult.appendText("La parola da tradurre è: "+toTranslate.toUpperCase()+" "+translation);
+	    	}else {
+	    	txtResult.appendText("La parola da tradurre è: "+toTranslate+". La sua traduzione è: "+translation+".\n");}
 	    	txtWord.clear();
     }
     

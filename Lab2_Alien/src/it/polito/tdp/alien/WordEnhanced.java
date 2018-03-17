@@ -10,9 +10,9 @@ public class WordEnhanced {
 	private List<String> listTranslation = new ArrayList<String>();
 	
 	public WordEnhanced(String alienWord, String translation) {
-		super();
 		this.alienWord = alienWord;
-		this.translation = translation;
+		this.translation=translation;
+		listTranslation.add(translation);
 	}
 	
 	
@@ -26,11 +26,12 @@ public class WordEnhanced {
 	}
 
 
-	public String getTranslation() {
-		String translationTmp=listTranslation.get(0);
-		for(int i=1; i<listTranslation.size(); i++)
-		{
-			translationTmp+= " oppure "+listTranslation.get(i);
+	public String getTranslation() {	
+		String translationTmp=listTranslation.get(0).toUpperCase();
+		if(listTranslation.size()>1) {
+			for(int i=1; i<listTranslation.size(); i++) {
+			translationTmp+= " oppure "+listTranslation.get(i).toUpperCase();
+			}
 		}
 		return translationTmp;
 	}
@@ -65,6 +66,7 @@ public class WordEnhanced {
 		} else if (!alienWord.equals(other.alienWord))
 			return false;
 		return true;
-	}	
+	}
+
 
 }
