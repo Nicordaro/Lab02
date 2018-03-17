@@ -9,6 +9,7 @@ public class AlienDictionary {
 	private List<WordEnhanced> dictionary=new LinkedList<WordEnhanced>();
 	private List<String> incompleteWords=new LinkedList<String>();
 	
+	
 	public void addWord(String alienWord, String translation) {
 		if(dictionary.size()==0) {
 			WordEnhanced we = new WordEnhanced(alienWord, translation);
@@ -60,7 +61,7 @@ public class AlienDictionary {
 			for(String s: incompleteWords) {
 				for(WordEnhanced w: this.dictionary) {
 					if(w.getAlienWord().toLowerCase().equals(s.toLowerCase())) {
-						translation+=" Trovata questa possibile traduzione: "+w.getTranslation();
+						translation+=("Trovata questa possibile traduzione: "+w.getTranslation());
 					}
 				}
 			}
