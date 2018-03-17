@@ -76,10 +76,10 @@ public class AlienController {
     		String inseritaNat=txtNative.getText();
     		toAddAlien=txtAlien.getText().toLowerCase();
     		toAddNative=txtNative.getText().toLowerCase();
-    		ad.addWord(toAddAlien, toAddNative);
     		txtResult.appendText("\nLa traduzione è stata inserita. "+inseritaAl.toUpperCase()+" corrisponde a "+inseritaNat.toUpperCase());
     		txtAlien.clear();
     		txtNative.clear();
+    		ad.addWord(toAddAlien, toAddNative);
     	}
     	
 

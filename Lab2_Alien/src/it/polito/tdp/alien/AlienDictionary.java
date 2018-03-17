@@ -10,20 +10,23 @@ public class AlienDictionary {
 	private List<String> incompleteWords=new LinkedList<String>();
 	
 	public void addWord(String alienWord, String translation) {
-		
-		WordEnhanced toAdd = new WordEnhanced(alienWord, translation);
-		
+		if(dictionary.size()==0) {
+			WordEnhanced we = new WordEnhanced(alienWord, translation);
+			//we.setTranslation(translation);
+			dictionary.add(we);
+		}
+	//	WordEnhanced toAdd = new WordEnhanced(alienWord, translation);
+		else {
 		for(WordEnhanced we : this.dictionary) {
 			if(alienWord.toLowerCase().equals(we.getAlienWord().toLowerCase())) {
 				we.setTranslation(translation);
 			}
-			else {
-				this.dictionary.add(toAdd);
-				toAdd.setTranslation(translation);
-			}
+			else
+				dictionary.add(new WordEnhanced(alienWord, translation));
+			}}
 				
 		}
-	}
+	
 	
 	public String translateWord(String alienWord) {
 		String translation="";
