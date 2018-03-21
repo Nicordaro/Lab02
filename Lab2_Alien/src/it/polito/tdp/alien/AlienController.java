@@ -57,10 +57,11 @@
         		String inseritaNat=txtNative.getText();
         		toAddAlien=txtAlien.getText().toLowerCase();
         		toAddNative=txtNative.getText().toLowerCase();
-        		txtResult.appendText("La traduzione è stata inserita. "+inseritaAl.toUpperCase()+" corrisponde a "+inseritaNat.toUpperCase()+"\n");
-        		ad.addWord(toAddAlien, toAddNative);
         		txtAlien.clear();
         		txtNative.clear();
+        		txtResult.appendText("La traduzione è stata inserita. "+inseritaAl.toUpperCase()+" corrisponde a "+inseritaNat.toUpperCase()+"\n");
+        		ad.addWord(toAddAlien, toAddNative);
+        		
         		return;
         	}
         	}
